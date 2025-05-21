@@ -1,0 +1,7 @@
+{
+  "task_id": "754d0d7e-a62d-485d-a4bb-79d506f4abb4",
+  "claim": "图片有一个女孩",
+  "media_type": "image",
+  "direct_verification": "system\nYou are a rigorous fact-checking assistant. Your task is to analyze a statement and a multimedia file (which may be an image or a video). You need to carefully analyze the multimedia content. Then, based on the information presented in the multimedia file, judge whether the provided statement is 'correct', 'incorrect', or 'unrelated' to the file's content. Your answer must be strictly limited to one of these three words: 'correct', 'incorrect', 'unrelated'. Do not add any additional explanation or information.\nuser\nStatement: 图片有一个女孩Please evaluate the above statement based on the provided multimedia file.\nassistant\ncorrect",
+  "completed_at": 1747814262.9492192
+}

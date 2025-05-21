@@ -1,0 +1,31 @@
+# Core ML libraries
+sentencepiece>=0.1.99
+sentence-transformers>=2.2.2
+faiss-cpu;
+
+# Qwen-specific dependencies
+peft>=0.6.0
+tokenizers>=0.15.0
+safetensors>=0.4.0
+einops>=0.7.0
+opencv-python>=4.8.0
+
+# Web retrieval dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+html2text>=2020.1.16
+chardet>=5.2.0
+
+# Utility libraries
+numpy>=1.24.0
+tqdm>=4.66.0
+regex>=2023.8.8
+pydantic>=2.3.0
+urllib3>=2.0.0
+python-dotenv>=1.0.0
+jsonschema>=4.19.0
+
+# Optional: Audio processing (if needed)
+librosa>=0.10.1;
+soundfile>=0.12.1

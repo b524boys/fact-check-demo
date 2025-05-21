@@ -1,0 +1,54 @@
+2025-05-21 11:14:43,561 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.128.12.36:8081
+2025-05-21 11:14:43,561 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 11:16:19,673 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:19] "GET /health HTTP/1.1" 200 -
+2025-05-21 11:16:21,131 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:21] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 11:16:22,600 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 11:16:24,706 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:24] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:16:28,547 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 11:16:30,628 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:30] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:16:33,847 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 11:16:36,693 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:36] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:16:38,459 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 11:16:42,630 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:42] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:16:48,552 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:48] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:16:54,466 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:16:54] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:17:00,356 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:17:00] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:17:06,232 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:17:06] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:17:12,108 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:17:12] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:17:17,982 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:17:17] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:17:23,829 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:17:23] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:17:39,738 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:17:39] "GET /get_queries/a43a3e4a-1f49-4a7c-8d7c-2f98da287f13 HTTP/1.1" 200 -
+2025-05-21 11:22:22,550 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:22] "GET /health HTTP/1.1" 200 -
+2025-05-21 11:22:23,938 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:23] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 11:22:24,487 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 11:22:25,749 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 11:22:26,787 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:26] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:22:32,692 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:32] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:22:38,552 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:38] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:22:45,119 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:45] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:22:51,037 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:51] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:22:56,901 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:22:56] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:02,718 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:02] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:08,579 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:08] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:14,441 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:14] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:20,309 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:20] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:26,230 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:26] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:34,854 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 11:23:35,059 - accelerate.utils.modeling - INFO - Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 3985858176 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+2025-05-21 11:23:40,967 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 11:23:42,089 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:42] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:47,986 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:47] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:53,882 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:53] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:23:59,734 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:23:59] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:05,626 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:05] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:11,590 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:11] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:17,498 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:17] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:23,397 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:23] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:29,292 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:29] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:35,145 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:35] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:24:41,044 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:41] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
