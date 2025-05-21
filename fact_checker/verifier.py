@@ -497,7 +497,7 @@ Let me systematically analyze this claim:
 5. I'll weigh the overall evidence to reach a final conclusion
 </think>
 
-Important: Even if you had an initial impression about the claim, your judgment must be based on the provided evidence. Remember that any identified people in the media might be incorrect, so verify their identities using the evidence.
+Important: Even if you had an initial impression about the claim, your judgment must be based on the provided evidence. Remember that any identified people in the media might be incorrect, so verify their identities using the evidence. Even if the evidence and statement wording are slightly different, as long as their meanings are consistent, they should still be judged as 'true'.
 
 Analyze each piece of evidence and determine whether it supports, contradicts, or is neutral toward the claim.
 
@@ -541,7 +541,7 @@ Let me systematically analyze this claim:
 5. I'll weigh the overall evidence to reach a final conclusion
 </think>
 
-Important: Even if you had an initial impression about the claim, your judgment must be based on the provided evidence.
+Important: Even if you had an initial impression about the claim, your judgment must be based on the provided evidence.Even if the evidence and statement wording are slightly different, as long as their meanings are consistent, they should still be judged as 'true'.
 
 Analyze each piece of evidence and determine whether it supports, contradicts, or is neutral toward the claim.
 

@@ -1,0 +1,13 @@
+
+{
+  "final_judgment": "false",
+  "confidence": 0.6,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "Biden was diagnosed with prostate cancer in May 2025, which is unrelated to the claim."
+    }
+  ]
+}

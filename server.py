@@ -11,8 +11,10 @@ from processors.claim_processor import ClaimProcessor
 from processors.video_processor import VideoProcessor
 from processors.image_processor import ImageProcessor
 from fact_checker.verifier import FactVerifier
+from utils.evidence_enhancer import enhance_evidence
 from models.qwen_model import QwenModel
 import config
+import threading
 from werkzeug.serving import run_simple
 
 app = Flask(__name__)
@@ -163,8 +165,24 @@ def process_task(task_id):
         
         # 更新任务状态
         task["status"] = "waiting_for_queries"
+        task["queries_start_time"] = time.time()
         
         print(f"任务 {task_id} 处理完成。{len(task['queries'])} 个查询准备就绪。")
+
+        def check_timeout():
+            if task_id in tasks and tasks[task_id]["status"] == "waiting_for_queries":
+                print(f"任务 {task_id} 等待查询结果超时(180秒)，自动开始验证...")
+                # 自动进入验证阶段
+                task["status"] = "verifying"
+                # 启动验证线程
+                verify_thread = threading.Thread(target=verify_results, args=(task_id,))
+                verify_thread.daemon = True
+                verify_thread.start()
+        
+        timer = threading.Timer(180.0, check_timeout)
+        timer.daemon = True
+        timer.start()
+        task["timeout_timer"] = timer
         
     except Exception as e:
         print(f"处理任务 {task_id} 时出错: {str(e)}")
@@ -212,6 +230,11 @@ def submit_query_results(task_id):
         return jsonify({"error": "Task not found"}), 404
     
     task = tasks[task_id]
+    if task["status"] not in ["waiting_for_queries"]:
+        return jsonify({
+            "status": "rejected", 
+            "message": f"Task is already in '{task['status']}' status, no longer accepting results"
+        }), 400
     
     try:
         # 获取查询结果
@@ -261,7 +284,7 @@ def verify_results(task_id):
                 all_evidence.extend(results)
         
         # 去重
-        all_evidence = list(set(all_evidence))
+        all_evidence = enhance_evidence(all_evidence)
         print(f"收集到 {len(all_evidence)} 条有效证据")
         
         # 进行事实验证

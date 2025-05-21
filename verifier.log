@@ -52,3 +52,776 @@ These minimum requirements are specific to this allocation attempt and may vary.
 2025-05-21 11:24:29,292 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:29] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
 2025-05-21 11:24:35,145 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:35] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
 2025-05-21 11:24:41,044 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:24:41] "GET /get_queries/135a46d3-6634-43f8-b557-f006469031e1 HTTP/1.1" 200 -
+2025-05-21 11:52:19,781 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.128.12.36:8081
+2025-05-21 11:52:19,781 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 11:52:49,336 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:52:49] "GET /health HTTP/1.1" 200 -
+2025-05-21 11:52:51,040 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:52:51] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 11:52:52,496 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 11:52:54,874 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:52:54] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:52:56,238 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 11:53:01,458 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 11:53:01,559 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:01] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:05,187 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 11:53:07,449 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:07] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:14,421 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:14] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:20,331 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:20] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:26,248 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:26] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:32,117 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:32] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:37,971 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:37] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:43,888 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:43] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:53:49,742 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:53:49] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:54:05,617 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:54:05] "GET /get_queries/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:09,072 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:09] "POST /submit_query_results/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:09,927 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:09] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:12,824 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:12] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:15,685 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:15] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:18,530 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:18] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:21,387 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:21] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:24,234 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:24] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:27,087 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:27] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:29,928 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:29] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:32,784 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:32] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:35,672 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:35] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:38,536 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:38] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:41,446 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:41] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:44,333 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:44] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:47,223 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:47] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:50,102 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:50] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:52,991 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:52] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:55,840 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:55] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:56:58,649 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:56:58] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:01,533 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:01] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:04,440 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:04] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:07,295 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:07] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:10,166 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:10] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:13,036 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:13] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:15,931 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:15] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:18,844 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:18] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:21,721 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:21] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:24,589 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:24] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:27,445 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:27] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:30,376 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:30] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:33,232 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:33] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:36,119 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:36] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:38,991 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:38] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:41,844 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:41] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:44,703 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:44] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:47,566 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:47] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:50,483 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:50] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:53,361 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:53] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:56,234 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:56] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:57:59,121 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:57:59] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:01,980 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:01] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:04,867 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:04] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:07,794 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:07] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:10,646 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:10] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:13,519 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:13] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:16,423 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:16] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:19,306 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:19] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:22,161 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:22] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:25,017 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:25] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:27,895 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:27] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:30,787 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:30] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:33,702 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:33] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:36,614 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:36] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:39,531 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:39] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:42,424 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:42] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:45,304 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:45] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:48,144 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:48] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:51,037 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:51] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:53,913 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:53] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:56,830 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:56] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:58:59,718 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:58:59] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:02,604 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:02] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:05,474 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:05] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:08,368 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:08] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:11,301 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:11] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:14,187 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:14] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:17,013 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:17] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:19,866 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:19] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:22,751 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:22] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:25,608 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:25] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:28,513 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:28] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:31,450 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:31] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:34,340 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:34] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:37,260 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:37] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:40,114 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:40] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:43,044 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:43] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:45,942 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:45] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:48,817 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:48] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:51,718 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:51] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:54,631 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:54] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 11:59:57,511 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 11:59:57] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:00,424 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:00] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:03,306 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:03] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:06,265 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:06] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:09,156 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:09] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:12,031 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:12] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:14,889 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:14] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:17,788 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:17] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:20,702 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:20] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:23,603 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:23] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:26,500 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:26] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:29,422 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:29] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:32,280 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:32] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:35,180 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:35] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:38,050 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:38] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:40,932 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:40] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:43,841 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:43] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:46,707 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:46] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:49,558 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:49] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:52,412 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:52] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:55,305 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:55] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:00:58,196 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:00:58] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:02,040 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:02] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:04,942 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:04] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:07,781 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:07] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:10,639 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:10] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:13,534 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:13] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:16,417 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:16] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:19,333 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:19] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:22,201 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:22] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:25,109 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:25] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:27,987 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:27] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:30,911 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:30] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:33,766 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:33] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:36,646 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:36] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:39,512 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:39] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:42,392 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:42] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:45,306 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:45] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:48,205 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:48] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:51,105 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:51] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:53,972 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:53] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:56,844 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:56] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:01:59,704 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:01:59] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:02,646 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:02] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:05,563 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:05] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:08,463 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:08] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:11,292 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:11] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:14,135 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:14] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:17,029 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:17] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:19,995 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:19] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:22,923 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:22] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:25,815 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:25] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:28,698 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:28] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:31,624 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:31] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:34,478 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:34] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:37,308 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:37] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:40,224 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:40] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:43,122 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:43] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:45,981 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:45] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:48,873 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:48] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:51,763 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:51] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:54,704 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:54] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:02:57,561 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:02:57] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:00,442 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:00] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:03,326 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:03] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:06,250 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:06] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:09,175 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:09] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:12,051 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:12] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:14,980 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:14] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:17,873 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:17] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:20,763 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:20] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:23,842 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:23] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:26,723 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:26] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:29,593 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:29] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:32,395 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:32] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:35,275 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:35] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:38,183 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:38] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:41,047 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:41] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:43,888 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:43] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:46,993 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:46] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:49,827 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:49] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:53,688 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:53] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:56,599 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:56] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:03:59,487 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:03:59] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:02,366 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:02] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:05,181 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:05] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:08,099 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:08] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:10,951 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:10] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:13,788 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:13] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:16,659 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:16] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:19,530 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:19] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:22,422 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:22] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:25,257 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:25] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:28,111 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:28] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:30,965 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:30] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:33,894 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:33] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:36,790 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:36] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:39,747 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:39] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:42,582 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:42] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:45,427 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:45] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:48,315 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:48] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:51,197 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:51] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:54,053 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:54] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:04:56,988 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:04:56] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:00,920 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:00] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:03,778 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:03] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:06,663 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:06] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:09,727 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:09] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:12,566 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:12] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:15,456 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:15] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:18,322 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:18] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:22,256 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:22] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:25,186 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:25] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:28,073 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:28] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:30,939 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:30] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:33,843 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:33] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:36,726 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:36] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:39,592 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:39] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:42,515 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:42] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:45,371 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:45] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:49,295 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:49] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:52,329 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:52] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:55,182 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:55] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:05:58,084 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:05:58] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:06:01,023 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:06:01] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:06:03,913 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:06:03] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:06:06,797 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:06:06] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:06:09,704 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:06:09] "GET /get_task_status/c9f868a7-eae5-4abf-a320-035df573efed HTTP/1.1" 200 -
+2025-05-21 12:53:44,650 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.128.12.36:8081
+2025-05-21 12:53:44,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 12:54:29,444 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.128.12.36:8081
+2025-05-21 12:54:29,445 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 12:54:48,727 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:54:48] "GET /health HTTP/1.1" 200 -
+2025-05-21 12:54:50,358 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:54:50] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 12:54:51,882 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 12:54:53,213 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:54:53] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:54:59,096 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:54:59] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:05,004 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:05] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:11,299 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 12:55:11,534 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:11] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:17,395 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:17] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:23,250 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:23] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:29,202 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:29] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:35,375 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:35] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:41,464 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:41] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:47,390 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:55:47] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:55:51,234 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 12:55:55,530 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 12:56:03,279 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:03] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:09,165 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:09] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:15,639 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:15] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:21,466 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:21] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:27,336 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:27] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:33,250 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:33] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:39,135 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:39] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:56:45,007 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 12:56:45] "GET /get_queries/6318fc72-7904-4a4b-94f2-edc1fce43b08 HTTP/1.1" 200 -
+2025-05-21 12:58:44,899 - fact_verifier - INFO - Initializing FactVerifier with DeepSeek model: /home/featurize/data/models/deepseek_r1, device: cuda
+2025-05-21 12:58:45,343 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 12:58:47,266 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 12:58:47,267 - fact_verifier - INFO - DeepSeek model loaded successfully for fact verification on cuda
+2025-05-21 12:58:47,267 - fact_verifier - INFO - Model is on device: cuda:0
+2025-05-21 12:58:52,208 - fact_verifier - INFO - Raw response for initial verification: ```json
+{
+  "initial_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "The claim '拜登罹患前列腺癌'" is not supported by the media content provided. The media focuses on Biden's political stance and medical condition, but the claim itself does not appear to be accurate."
+}
+```...
+2025-05-21 12:58:52,208 - fact_verifier - INFO - Filtered response for initial verification: 
+{
+  "initial_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "The claim '拜登罹患前列腺癌'" is not supported by the media content provided. The media focuses on Biden's political stance and medical condition, but the claim itself does not appear to be accurate."
+}
+...
+2025-05-21 12:58:52,209 - fact_verifier - ERROR - Failed to parse JSON after cleaning: Expecting ',' delimiter: line 4 column 28 (char 81)
+2025-05-21 12:58:52,209 - fact_verifier - ERROR - Cleaned JSON: {
+  "initial_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "The claim "拜登罹患前列腺癌"" is not supported by the media content provided. The media focuses on Biden's political stance and medical condition, but the claim itself does not appear to be accurate."
+}
+2025-05-21 12:58:52,210 - fact_verifier - ERROR - Error parsing initial verification response: Expecting ',' delimiter: line 4 column 28 (char 81)
+2025-05-21 12:58:52,211 - fact_verifier - INFO - Verifying claim with 2 pieces of evidence
+2025-05-21 12:58:52,211 - fact_verifier - INFO - First evidence example: Biden was diagnosed with prostate cancer in May 2025...
+2025-05-21 12:58:59,019 - fact_verifier - INFO - Raw response for evidence verification: ```json
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "The first evidence states that Biden was diagnosed with prostate cancer in May 2025, which directly contradicts the claim."
+    }
+  ]
+}
+```...
+2025-05-21 12:58:59,019 - fact_verifier - INFO - Filtered response for evidence verification: 
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "The first evidence states that Biden was diagnosed with prostate cancer in May 2025, which directly contradicts the claim."
+    }
+  ]
+}
+...
+2025-05-21 12:58:59,020 - fact_verifier - INFO - Verification response saved to verification_response.txt
+2025-05-21 13:10:23,813 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:23] "GET /health HTTP/1.1" 200 -
+2025-05-21 13:10:25,382 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:25] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 13:10:25,800 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:10:27,519 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 13:10:28,256 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:28] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:10:32,691 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:10:32,898 - accelerate.utils.modeling - INFO - Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 3985858176 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+2025-05-21 13:10:34,089 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:34] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:10:39,338 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 13:10:40,241 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:40] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:10:46,163 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:46] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:10:52,035 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:52] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:10:58,126 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:10:58] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:11:04,058 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:11:04] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:11:09,981 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:11:09] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:11:15,910 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:11:15] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:11:21,850 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:11:21] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:11:27,699 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:11:27] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:11:43,575 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:11:43] "GET /get_queries/95213f5b-38b8-4eb1-81f1-92ff0142252a HTTP/1.1" 200 -
+2025-05-21 13:13:35,543 - fact_verifier - INFO - Initializing FactVerifier with DeepSeek model: /home/featurize/data/models/deepseek_r1, device: cuda
+2025-05-21 13:13:35,932 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:13:36,840 - fact_verifier - INFO - DeepSeek model loaded successfully for fact verification on cuda
+2025-05-21 13:13:36,841 - fact_verifier - INFO - Model is on device: cuda:0
+2025-05-21 13:13:38,544 - fact_verifier - INFO - Raw response for initial verification: ```json
+{
+  "initial_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "The media content does not provide sufficient details to confirm the claim. While it mentions a man with cancer, the claim specifically refers to '拜在2025年5月登罹患癌症' which translates to '拜 in 2025 May die of cancer' and does not include the date or other relevant information."
+}
+```...
+2025-05-21 13:13:38,544 - fact_verifier - INFO - Filtered response for initial verification: 
+{
+  "initial_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "The media content does not provide sufficient details to confirm the claim. While it mentions a man with cancer, the claim specifically refers to '拜在2025年5月登罹患癌症' which translates to '拜 in 2025 May die of cancer' and does not include the date or other relevant information."
+}
+...
+2025-05-21 13:13:38,544 - fact_verifier - INFO - Verifying claim with 2 pieces of evidence
+2025-05-21 13:13:38,544 - fact_verifier - INFO - First evidence example: Biden was diagnosed with prostate cancer in May 2025...
+2025-05-21 13:13:39,967 - fact_verifier - INFO - Raw response for evidence verification: ```json
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "There is no supporting evidence for the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "No evidence directly supports the claim."
+    }
+  ]
+}
+```...
+2025-05-21 13:13:39,968 - fact_verifier - INFO - Filtered response for evidence verification: 
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "There is no supporting evidence for the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "No evidence directly supports the claim."
+    }
+  ]
+}
+...
+2025-05-21 13:13:39,969 - fact_verifier - INFO - Verification response saved to verification_response.txt
+2025-05-21 13:24:10,613 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:10] "GET /health HTTP/1.1" 200 -
+2025-05-21 13:24:12,153 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:12] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 13:24:12,531 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:24:15,157 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:15] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:15,809 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:24:20,075 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2025-05-21 13:24:21,063 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:21] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:23,970 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 13:24:26,925 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:26] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:32,803 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:32] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:38,694 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:38] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:44,596 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:44] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:50,495 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:50] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:24:56,370 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:24:56] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:02,288 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:02] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:08,178 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:08] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:14,044 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:14] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:29,999 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:29] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:35,873 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:35] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:41,764 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:41] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:47,605 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:47] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:53,463 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:53] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:25:59,351 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:25:59] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:05,253 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:05] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:11,129 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:11] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:16,985 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:16] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:23,542 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:23] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:29,407 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:29] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:45,313 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:45] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:51,180 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:51] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:26:57,013 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:26:57] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:02,921 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:02] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:08,818 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:08] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:14,727 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:14] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:20,586 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:20] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:26,445 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:26] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:32,275 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:32] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:27:38,168 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:27:38] "GET /get_queries/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:29:35,126 - fact_verifier - INFO - Initializing FactVerifier with DeepSeek model: /home/featurize/data/models/deepseek_r1, device: cuda
+2025-05-21 13:29:35,504 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:29:36,362 - fact_verifier - INFO - DeepSeek model loaded successfully for fact verification on cuda
+2025-05-21 13:29:36,362 - fact_verifier - INFO - Model is on device: cuda:0
+2025-05-21 13:29:37,298 - fact_verifier - INFO - Raw response for initial verification: ```json
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The claim does not appear to be supported by the media content. The media highlights Biden's diagnosis but does not confirm the date."
+}
+```...
+2025-05-21 13:29:37,299 - fact_verifier - INFO - Filtered response for initial verification: 
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The claim does not appear to be supported by the media content. The media highlights Biden's diagnosis but does not confirm the date."
+}
+...
+2025-05-21 13:29:37,299 - fact_verifier - INFO - Verifying claim with 2 pieces of evidence
+2025-05-21 13:29:37,299 - fact_verifier - INFO - First evidence example: Biden was diagnosed with prostate cancer in May 2025...
+2025-05-21 13:29:39,168 - fact_verifier - INFO - Raw response for evidence verification: ```json
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "The first evidence states that Biden was diagnosed with prostate cancer in May 2025, which directly contradicts the claim of cancer diagnosis in May 2025."
+    }
+  ]
+}
+```...
+2025-05-21 13:29:39,168 - fact_verifier - INFO - Filtered response for evidence verification: 
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "The first evidence states that Biden was diagnosed with prostate cancer in May 2025, which directly contradicts the claim of cancer diagnosis in May 2025."
+    }
+  ]
+}
+...
+2025-05-21 13:29:39,170 - fact_verifier - INFO - Verification response saved to verification_response.txt
+2025-05-21 13:29:41,156 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:29:41] "[31m[1mPOST /submit_query_results/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1[0m" 400 -
+2025-05-21 13:29:52,019 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:29:52] "GET /get_task_status/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:29:53,003 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:29:53] "GET /download_result/ae90410c-0011-4018-b360-f156fe354d28 HTTP/1.1" 200 -
+2025-05-21 13:49:11,906 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:11] "GET /health HTTP/1.1" 200 -
+2025-05-21 13:49:13,392 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:13] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 13:49:13,787 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:49:16,509 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:16] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:17,088 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:49:17,292 - accelerate.utils.modeling - INFO - Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 3985858176 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+2025-05-21 13:49:22,395 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:22] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:22,990 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 13:49:28,273 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:28] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:34,302 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:34] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:40,198 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:40] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:46,094 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:46] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:52,014 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:52] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:49:58,597 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:49:58] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:50:04,511 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:50:04] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:50:10,385 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 13:50:10] "GET /get_queries/65bb98de-473a-41fe-aef2-676ab6f93b63 HTTP/1.1" 200 -
+2025-05-21 13:52:08,138 - fact_verifier - INFO - Initializing FactVerifier with DeepSeek model: /home/featurize/data/models/deepseek_r1, device: cuda
+2025-05-21 13:52:08,511 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 13:52:09,369 - fact_verifier - INFO - DeepSeek model loaded successfully for fact verification on cuda
+2025-05-21 13:52:09,369 - fact_verifier - INFO - Model is on device: cuda:0
+2025-05-21 13:52:10,433 - fact_verifier - INFO - Raw response for initial verification: ```json
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The media content does not provide sufficient details to confirm the truth of the claim. It only mentions the presence of cancer-related information but does not specify the extent or accuracy."
+}
+```...
+2025-05-21 13:52:10,433 - fact_verifier - INFO - Filtered response for initial verification: 
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The media content does not provide sufficient details to confirm the truth of the claim. It only mentions the presence of cancer-related information but does not specify the extent or accuracy."
+}
+...
+2025-05-21 13:52:10,433 - fact_verifier - INFO - Verifying claim with 2 pieces of evidence
+2025-05-21 13:52:10,433 - fact_verifier - INFO - First evidence example: Biden was diagnosed with prostate cancer in May 2025...
+2025-05-21 13:52:11,859 - fact_verifier - INFO - Raw response for evidence verification: ```json
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "There is no supporting evidence for the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "No direct evidence links Biden to cancer diagnosis."
+    }
+  ]
+}
+```...
+2025-05-21 13:52:11,859 - fact_verifier - INFO - Filtered response for evidence verification: 
+{
+  "final_judgment": "false",
+  "confidence": 0.5,
+  "reasoning": "There is no supporting evidence for the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "No direct evidence links Biden to cancer diagnosis."
+    }
+  ]
+}
+...
+2025-05-21 13:52:11,860 - fact_verifier - INFO - Verification response saved to verification_response.txt
+2025-05-21 14:02:45,918 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:02:45] "GET /health HTTP/1.1" 200 -
+2025-05-21 14:02:47,334 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:02:47] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 14:02:47,721 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 14:02:50,235 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:02:50] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:02:51,455 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 14:02:51,662 - accelerate.utils.modeling - INFO - Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 3985858176 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+2025-05-21 14:02:56,381 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:02:56] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:02:58,156 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 14:03:02,311 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:02] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:08,246 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:08] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:14,284 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:14] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:20,234 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:20] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:26,186 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:26] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:32,097 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:32] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:37,966 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:37] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:03:44,858 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:03:44] "GET /get_queries/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:04:50,962 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:04:50] "POST /submit_query_results/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:04:51,830 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:04:51] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:04:54,717 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:04:54] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:04:57,603 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:04:57] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:00,516 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:00] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:03,392 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:03] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:06,226 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:06] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:09,113 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:09] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:12,018 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:12] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:14,891 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:14] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:17,777 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:17] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:20,659 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:20] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:23,524 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:23] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:26,446 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:26] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:29,364 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:29] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:32,297 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:32] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:35,211 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:35] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:38,047 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:38] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:40,944 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:40] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:43,800 - fact_verifier - INFO - Initializing FactVerifier with DeepSeek model: /home/featurize/data/models/deepseek_r1, device: cuda
+2025-05-21 14:05:44,142 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:44] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:44,172 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 14:05:45,031 - fact_verifier - INFO - DeepSeek model loaded successfully for fact verification on cuda
+2025-05-21 14:05:45,031 - fact_verifier - INFO - Model is on device: cuda:0
+2025-05-21 14:05:45,798 - fact_verifier - INFO - Raw response for initial verification: ```json
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The media content does not provide sufficient details to confirm the truth of the claim."
+}
+```...
+2025-05-21 14:05:45,799 - fact_verifier - INFO - Filtered response for initial verification: 
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The media content does not provide sufficient details to confirm the truth of the claim."
+}
+...
+2025-05-21 14:05:45,799 - fact_verifier - INFO - Verifying claim with 244 pieces of evidence
+2025-05-21 14:05:45,799 - fact_verifier - INFO - First evidence example: AMACO Brent has been making ceramic & craft related products in the USA since 1919....
+2025-05-21 14:05:46,828 - fact_verifier - INFO - Raw response for evidence verification: ```json
+{
+  "final_judgment": "true",
+  "confidence": [0.0],
+  "reasoning": "The claim is supported by the evidence.",
+  "evidence_analysis": []
+}
+```...
+2025-05-21 14:05:46,828 - fact_verifier - INFO - Filtered response for evidence verification: 
+{
+  "final_judgment": "true",
+  "confidence": [0.0],
+  "reasoning": "The claim is supported by the evidence.",
+  "evidence_analysis": []
+}
+...
+2025-05-21 14:05:46,830 - fact_verifier - INFO - Verification response saved to verification_response.txt
+2025-05-21 14:05:47,020 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:47] "GET /get_task_status/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:05:48,136 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:05:48] "GET /download_result/3b77d871-06a1-4061-bade-56483bf96d42 HTTP/1.1" 200 -
+2025-05-21 14:11:41,244 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:11:41] "GET /health HTTP/1.1" 200 -
+2025-05-21 14:11:43,500 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:11:43] "POST /submit_task HTTP/1.1" 200 -
+2025-05-21 14:11:43,891 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 14:11:46,376 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:11:46] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:11:47,846 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 14:11:48,052 - accelerate.utils.modeling - INFO - Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - 0: 3985858176 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+2025-05-21 14:11:53,270 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:11:53] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:11:54,904 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 14:11:55,013 - qwen_omni_utils.v2_5.vision_process - INFO - decord:  video_path='uploads/6f14c438-1502-4885-b931-613220fbbc43/03.mp4', total_frames=74, video_fps=23.997405685871797, time=0.048s
+2025-05-21 14:11:59,200 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:11:59] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:05,165 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:05] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:11,110 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:11] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:17,166 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:17] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:23,070 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:23] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:29,034 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:29] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:35,031 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:35] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:40,907 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:40] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:12:56,763 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:12:56] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:02,639 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:02] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:08,546 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:08] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:14,466 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:14] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:20,339 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:20] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:26,242 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:26] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:32,118 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:32] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:38,017 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:38] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:43,914 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:43] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:49,770 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:49] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:13:55,633 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:13:55] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:11,534 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:11] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:12,308 - root - WARNING - System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+2025-05-21 14:14:17,600 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:17] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:23,478 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:23] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:27,413 - qwen_omni_utils.v2_5.vision_process - INFO - decord:  video_path='uploads/6f14c438-1502-4885-b931-613220fbbc43/03.mp4', total_frames=74, video_fps=23.997405685871797, time=0.007s
+2025-05-21 14:14:29,530 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:29] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:35,405 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:35] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:41,298 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:41] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:47,222 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:47] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:53,098 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:53] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:14:59,026 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:14:59] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:04,890 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:04] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:10,879 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:10] "GET /get_queries/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:26,746 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:26] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:29,648 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:29] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:32,550 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:32] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:36,137 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:36] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:39,066 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:39] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:41,945 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:41] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:44,862 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:44] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:47,782 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:47] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:50,628 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:50] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:53,474 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:53] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:56,358 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:56] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:15:59,247 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:15:59] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:02,140 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:02] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:05,039 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:05] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:07,925 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:07] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:10,785 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:10] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:13,687 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:13] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:16,600 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:16] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:19,463 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:19] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:22,342 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:22] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:25,212 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:25] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:28,136 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:28] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:31,038 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:31] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:33,927 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:33] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:36,797 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:36] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:39,710 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:39] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:42,576 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:42] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:45,461 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:45] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:48,312 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:48] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:51,180 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:51] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:54,105 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:54] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:56,943 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:56] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:16:59,816 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:16:59] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:02,671 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:02] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:05,487 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:05] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:08,359 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:08] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:11,262 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:11] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:14,121 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:14] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:16,986 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:16] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:19,855 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:19] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:22,771 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:22] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:25,681 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:25] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:28,519 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:28] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:31,366 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:31] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:34,228 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:34] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:37,125 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:37] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:39,995 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:39] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:42,882 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:42] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:45,748 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:45] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:48,586 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:48] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:51,424 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:51] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:54,288 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:54] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:56,516 - fact_verifier - INFO - Initializing FactVerifier with DeepSeek model: /home/featurize/data/models/deepseek_r1, device: cuda
+2025-05-21 14:17:56,932 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-05-21 14:17:57,210 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:17:57] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:17:57,818 - fact_verifier - INFO - DeepSeek model loaded successfully for fact verification on cuda
+2025-05-21 14:17:57,818 - fact_verifier - INFO - Model is on device: cuda:0
+2025-05-21 14:17:59,184 - fact_verifier - INFO - Raw response for initial verification: ```json
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The media does not explicitly state that DeepSeek was used in缅甸's救灾, but it mentions that DeepSeek has been utilized in similar contexts. However, the claim oversimplifies the situation by stating 'in' without providing evidence of its role."
+}
+```...
+2025-05-21 14:17:59,185 - fact_verifier - INFO - Filtered response for initial verification: 
+{
+  "initial_judgment": "false",
+  "confidence": 0,
+  "reasoning": "The media does not explicitly state that DeepSeek was used in缅甸's救灾, but it mentions that DeepSeek has been utilized in similar contexts. However, the claim oversimplifies the situation by stating 'in' without providing evidence of its role."
+}
+...
+2025-05-21 14:17:59,185 - fact_verifier - INFO - Verifying claim with 2 pieces of evidence
+2025-05-21 14:17:59,185 - fact_verifier - INFO - First evidence example: Biden was diagnosed with prostate cancer in May 2025...
+2025-05-21 14:18:00,101 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:18:00] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:18:00,853 - fact_verifier - INFO - Raw response for evidence verification: ```json
+{
+  "final_judgment": "false",
+  "confidence": 0.6,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "Biden was diagnosed with prostate cancer in May 2025, which is unrelated to the claim."
+    }
+  ]
+}
+```...
+2025-05-21 14:18:00,853 - fact_verifier - INFO - Filtered response for evidence verification: 
+{
+  "final_judgment": "false",
+  "confidence": 0.6,
+  "reasoning": "This evidence does not support the claim.",
+  "evidence_analysis": [
+    {
+      "evidence_id": 1,
+      "relevance": "neutral",
+      "explanation": "Biden was diagnosed with prostate cancer in May 2025, which is unrelated to the claim."
+    }
+  ]
+}
+...
+2025-05-21 14:18:00,854 - fact_verifier - INFO - Verification response saved to verification_response.txt
+2025-05-21 14:18:02,999 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:18:02] "GET /get_task_status/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
+2025-05-21 14:18:03,865 - werkzeug - INFO - 172.16.50.151 - - [21/May/2025 14:18:03] "GET /download_result/6f14c438-1502-4885-b931-613220fbbc43 HTTP/1.1" 200 -
