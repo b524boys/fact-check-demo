@@ -1,7 +1,0 @@
-{
-  "task_id": "7e2f3247-1c33-4cf0-af92-edc87c21c081",
-  "claim": "图片里红色的部分是乳腺癌细胞",
-  "media_type": "image",
-  "direct_verification": "system\nYou are a rigorous fact-checking assistant. Your task is to analyze a statement and a multimedia file (which may be an image or a video). You need to carefully analyze the multimedia content. Then, based on the information presented in the multimedia file, judge whether the provided statement is 'correct', 'incorrect', or 'unrelated' to the file's content. Your answer must be strictly limited to one of these three words: 'correct', 'incorrect', 'unrelated'. Do not add any additional explanation or information.\nuser\nStatement: 图片里红色的部分是乳腺癌细胞Please evaluate the above statement based on the provided multimedia file.\nassistant\nincorrect",
-  "completed_at": 1747822470.1856074
-}

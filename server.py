@@ -7,17 +7,19 @@ import time
 import shutil
 from werkzeug.utils import secure_filename
 import traceback
-from processors.claim_processor import ClaimProcessor
 from processors.video_processor import VideoProcessor
 from processors.image_processor import ImageProcessor
 from fact_checker.verifier import FactVerifier
 from models.qwen_model import QwenModel
 import config
 from werkzeug.serving import run_simple
+from utils.evidence_enhancer import enhance_evidence
 import threading
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 import logging
+import torch
+import gc
 
 # 配置日志
 logging.basicConfig(
@@ -55,6 +57,228 @@ task_executor = ThreadPoolExecutor(
 # 跟踪活跃的Future对象
 active_futures = {}
 futures_lock = threading.Lock()
+
+def force_cleanup_gpu_memory():
+    """强制清理GPU内存"""
+    try:
+        # 清理PyTorch缓存
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.synchronize()
+            
+            # 获取当前GPU内存使用情况
+            allocated = torch.cuda.memory_allocated() / 1024**3  # GB
+            cached = torch.cuda.memory_reserved() / 1024**3  # GB
+            
+            print(f"[内存清理] GPU内存 - 已分配: {allocated:.2f}GB, 已缓存: {cached:.2f}GB")
+            logger.info(f"GPU内存清理完成 - 已分配: {allocated:.2f}GB, 已缓存: {cached:.2f}GB")
+        
+        # 强制Python垃圾回收
+        collected = gc.collect()
+        print(f"[内存清理] Python垃圾回收清理了 {collected} 个对象")
+        logger.info(f"Python垃圾回收清理了 {collected} 个对象")
+        
+    except Exception as e:
+        print(f"[内存清理] 清理过程中出错: {e}")
+        logger.error(f"GPU内存清理出错: {e}")
+
+def create_and_use_optimized_claim_processor(claim, content_type="primary"):
+    """创建并使用优化的ClaimProcessor，用完后立即释放"""
+    claim_processor = None
+    try:
+        print(f"[ClaimProcessor] 开始加载模型...")
+        logger.info("创建OptimizedClaimProcessor实例")
+        
+        # 使用优化后的ClaimProcessor
+        from processors.claim_processor import OptimizedClaimProcessor
+        claim_processor = OptimizedClaimProcessor(model_path=config.DEEPSEEK_MODEL_PATH)
+        
+        print(f"[ClaimProcessor] 模型加载完成，开始处理...")
+        
+        if content_type == "primary":
+            result = claim_processor.process_primary_claim(claim)
+        else:
+            result = claim_processor.process_media_content(claim, content_type)
+        
+        print(f"[ClaimProcessor] 处理完成，开始清理内存...")
+        logger.info("ClaimProcessor处理完成，开始清理")
+        
+        return result
+        
+    except Exception as e:
+        print(f"[ClaimProcessor] 处理过程中出错: {e}")
+        logger.error(f"ClaimProcessor出错: {e}")
+        raise
+    finally:
+        # 显式删除模型实例
+        if claim_processor is not None:
+            # 删除模型和分词器
+            if hasattr(claim_processor, 'model'):
+                del claim_processor.model
+            if hasattr(claim_processor, 'tokenizer'):
+                del claim_processor.tokenizer
+            del claim_processor
+            
+        # 强制清理GPU内存
+        force_cleanup_gpu_memory()
+        print(f"[OptimizedClaimProcessor] 内存清理完成")
+
+def create_and_use_video_processor(video_path):
+    """创建并使用VideoProcessor，用完后立即释放"""
+    video_processor = None
+    try:
+        print(f"[VideoProcessor] 开始加载模型...")
+        logger.info("创建VideoProcessor实例")
+        
+        video_processor = VideoProcessor(
+            model_path=config.QWEN_MODEL_PATH,
+            cache_dir=config.MODEL_CACHE_DIR
+        )
+        
+        print(f"[VideoProcessor] 模型加载完成，开始处理视频...")
+        result = video_processor.process(video_path)
+        
+        print(f"[VideoProcessor] 视频处理完成，开始清理内存...")
+        logger.info("VideoProcessor处理完成，开始清理")
+        
+        return result
+        
+    except Exception as e:
+        print(f"[VideoProcessor] 处理过程中出错: {e}")
+        logger.error(f"VideoProcessor出错: {e}")
+        raise
+    finally:
+        # 显式删除模型实例
+        if video_processor is not None:
+            # 删除内部的QwenModel
+            if hasattr(video_processor, 'model'):
+                if hasattr(video_processor.model, 'model'):
+                    del video_processor.model.model
+                if hasattr(video_processor.model, 'processor'):
+                    del video_processor.model.processor
+                del video_processor.model
+            del video_processor
+            
+        # 强制清理GPU内存
+        force_cleanup_gpu_memory()
+        print(f"[VideoProcessor] 内存清理完成")
+
+def create_and_use_image_processor(image_path):
+    """创建并使用ImageProcessor，用完后立即释放"""
+    image_processor = None
+    try:
+        print(f"[ImageProcessor] 开始加载模型...")
+        logger.info("创建ImageProcessor实例")
+        
+        image_processor = ImageProcessor(
+            model_path=config.QWEN_MODEL_PATH,
+            cache_dir=config.MODEL_CACHE_DIR
+        )
+        
+        print(f"[ImageProcessor] 模型加载完成，开始处理图像...")
+        result = image_processor.process(image_path)
+        
+        print(f"[ImageProcessor] 图像处理完成，开始清理内存...")
+        logger.info("ImageProcessor处理完成，开始清理")
+        
+        return result
+        
+    except Exception as e:
+        print(f"[ImageProcessor] 处理过程中出错: {e}")
+        logger.error(f"ImageProcessor出错: {e}")
+        raise
+    finally:
+        # 显式删除模型实例
+        if image_processor is not None:
+            # 删除内部的QwenModel
+            if hasattr(image_processor, 'model'):
+                if hasattr(image_processor.model, 'model'):
+                    del image_processor.model.model
+                if hasattr(image_processor.model, 'processor'):
+                    del image_processor.model.processor
+                del image_processor.model
+            del image_processor
+            
+        # 强制清理GPU内存
+        force_cleanup_gpu_memory()
+        print(f"[ImageProcessor] 内存清理完成")
+
+def create_and_use_verifier(claim, media_content, evidence=None, is_initial=True):
+    """创建并使用FactVerifier，用完后立即释放"""
+    verifier = None
+    try:
+        print(f"[FactVerifier] 开始加载模型...")
+        logger.info("创建FactVerifier实例")
+        
+        verifier = FactVerifier(model_path=config.DEEPSEEK_MODEL_PATH)
+        
+        print(f"[FactVerifier] 模型加载完成，开始验证...")
+        
+        if is_initial:
+            result = verifier.initial_verify(claim, media_content)
+        else:
+            result = verifier.verify_with_evidence(claim, media_content, evidence)
+        
+        print(f"[FactVerifier] 验证完成，开始清理内存...")
+        logger.info("FactVerifier处理完成，开始清理")
+        
+        return result
+        
+    except Exception as e:
+        print(f"[FactVerifier] 处理过程中出错: {e}")
+        logger.error(f"FactVerifier出错: {e}")
+        raise
+    finally:
+        # 显式删除模型实例
+        if verifier is not None:
+            # 删除模型和分词器
+            if hasattr(verifier, 'model'):
+                del verifier.model
+            if hasattr(verifier, 'tokenizer'):
+                del verifier.tokenizer
+            del verifier
+            
+        # 强制清理GPU内存
+        force_cleanup_gpu_memory()
+        print(f"[FactVerifier] 内存清理完成")
+
+def create_and_use_qwen_model(claim, media_path, media_type):
+    """创建并使用QwenModel进行直接验证，用完后立即释放"""
+    qwen_model = None
+    try:
+        print(f"[QwenModel] 开始加载模型...")
+        logger.info("创建QwenModel实例")
+        
+        qwen_model = QwenModel(
+            model_path=config.QWEN_MODEL_PATH,
+            cache_dir=config.MODEL_CACHE_DIR
+        )
+        
+        print(f"[QwenModel] 模型加载完成，开始直接验证...")
+        result = qwen_model.verify_claim(claim, media_path, media_type)
+        
+        print(f"[QwenModel] 直接验证完成，开始清理内存...")
+        logger.info("QwenModel处理完成，开始清理")
+        
+        return result
+        
+    except Exception as e:
+        print(f"[QwenModel] 处理过程中出错: {e}")
+        logger.error(f"QwenModel出错: {e}")
+        raise
+    finally:
+        # 显式删除模型实例
+        if qwen_model is not None:
+            # 删除模型和处理器
+            if hasattr(qwen_model, 'model'):
+                del qwen_model.model
+            if hasattr(qwen_model, 'processor'):
+                del qwen_model.processor
+            del qwen_model
+            
+        # 强制清理GPU内存
+        force_cleanup_gpu_memory()
+        print(f"[QwenModel] 内存清理完成")
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -123,7 +347,7 @@ def submit_task():
         
         # 使用线程池执行任务处理
         print(f"[{datetime.now()}] 提交任务到线程池: {task_id}")
-        future = task_executor.submit(process_task, task_id)
+        future = task_executor.submit(process_task_optimized, task_id)
         
         # 记录Future对象
         with futures_lock:
@@ -156,10 +380,10 @@ def submit_task():
         logger.error(f"提交任务时出错: {str(e)}")
         return jsonify({"error": str(e), "traceback": traceback.format_exc()}), 500
 
-def process_task(task_id):
-    """处理任务，提取需要查询的内容"""
-    print(f"[{datetime.now()}] [{threading.current_thread().name}] 开始处理任务 {task_id}...")
-    logger.info(f"[{threading.current_thread().name}] 开始处理任务 {task_id}")
+def process_task_optimized(task_id):
+    """优化后的任务处理函数，减少查询数量和碎片化"""
+    print(f"[{datetime.now()}] [{threading.current_thread().name}] 开始优化处理任务 {task_id}...")
+    logger.info(f"[{threading.current_thread().name}] 开始优化处理任务 {task_id}")
     
     with tasks_lock:
         if task_id not in tasks:
@@ -168,92 +392,120 @@ def process_task(task_id):
         task = dict(tasks[task_id])  # 创建副本以避免长时间持有锁
     
     try:
-        # 处理声明
-        print(f"处理声明: {task['claim']}")
-        claim_processor = ClaimProcessor(model_path=config.DEEPSEEK_MODEL_PATH)
-        claim_sentences = claim_processor.process(task['claim'])
+        all_queries = []
         
-        # 初始化查询列表，首先添加原始claim
-        queries = [task['claim']]  # 确保原始claim被搜索
-        
-        # 添加处理后的句子（去重）
-        for sentence in claim_sentences:
-            if sentence not in queries and sentence != task['claim']:
-                queries.append(sentence)
+        # 1. 处理主要声明 - 生成2-3个核心查询
+        print(f"处理主要声明: {task['claim']}")
+        primary_queries = create_and_use_optimized_claim_processor(task['claim'], "primary")
+        all_queries.extend(primary_queries)
         
         # 更新任务状态
         with tasks_lock:
             if task_id in tasks and tasks[task_id]["client_connected"]:
-                tasks[task_id]["claim_sentences"] = claim_sentences
-                tasks[task_id]["queries"] = queries
+                tasks[task_id]["primary_queries"] = primary_queries
                 tasks[task_id]["last_activity"] = time.time()
         
-        # 处理媒体文件（如果有）
+        # 2. 处理媒体文件（如果有）
+        media_queries = []
+        
         if task["media_path"] and task["media_type"]:
             if task["media_type"] == 'video':
                 # 处理视频
                 print(f"处理视频: {task['media_path']}")
-                video_processor = VideoProcessor(
-                    model_path=config.QWEN_MODEL_PATH,
-                    cache_dir=config.MODEL_CACHE_DIR
-                )
-                video_content = video_processor.process(task['media_path'])
+                video_content = create_and_use_video_processor(task['media_path'])
                 
-                # 处理文本描述
-                visual_sentences = claim_processor.process(video_content["visual_content"])
-                audio_sentences = claim_processor.process(video_content["audio_content"])
+                # 只对重要内容生成补充查询
+                visual_queries = []
+                audio_queries = []
                 
-                # 更新任务状态，添加新的查询（去重）
+                if video_content["visual_content"] and len(video_content["visual_content"]) > 50:
+                    visual_queries = create_and_use_optimized_claim_processor(
+                        video_content["visual_content"], "visual"
+                    )
+                
+                if video_content["audio_content"] and len(video_content["audio_content"]) > 50:
+                    audio_queries = create_and_use_optimized_claim_processor(
+                        video_content["audio_content"], "audio"
+                    )
+                
+                media_queries.extend(visual_queries)
+                media_queries.extend(audio_queries)
+                
+                # 更新任务状态
                 with tasks_lock:
                     if task_id in tasks and tasks[task_id]["client_connected"]:
                         tasks[task_id]["visual_content"] = video_content["visual_content"]
                         tasks[task_id]["audio_content"] = video_content["audio_content"]
                         tasks[task_id]["media_content"] = video_content["full_content"]
-                        tasks[task_id]["visual_sentences"] = visual_sentences
-                        tasks[task_id]["audio_sentences"] = audio_sentences
-                        
-                        # 添加新查询时去重
-                        current_queries = tasks[task_id]["queries"]
-                        for sentence in visual_sentences + audio_sentences:
-                            if sentence not in current_queries:
-                                current_queries.append(sentence)
-                        
+                        tasks[task_id]["visual_queries"] = visual_queries
+                        tasks[task_id]["audio_queries"] = audio_queries
                         tasks[task_id]["last_activity"] = time.time()
                 
             elif task["media_type"] == 'image':
                 # 处理图像
                 print(f"处理图像: {task['media_path']}")
-                image_processor = ImageProcessor(
-                    model_path=config.QWEN_MODEL_PATH,
-                    cache_dir=config.MODEL_CACHE_DIR
-                )
-                image_text = image_processor.process(task['media_path'])
+                image_text = create_and_use_image_processor(task['media_path'])
                 
-                # 处理图像描述
-                image_sentences = claim_processor.process(image_text)
+                # 只对有意义的图像描述生成补充查询
+                if image_text and len(image_text) > 50:
+                    image_queries = create_and_use_optimized_claim_processor(
+                        image_text, "image"
+                    )
+                    media_queries.extend(image_queries)
                 
-                # 更新任务状态，添加新的查询（去重）
+                # 更新任务状态
                 with tasks_lock:
                     if task_id in tasks and tasks[task_id]["client_connected"]:
                         tasks[task_id]["media_content"] = image_text
-                        tasks[task_id]["image_sentences"] = image_sentences
-                        
-                        # 添加新查询时去重
-                        current_queries = tasks[task_id]["queries"]
-                        for sentence in image_sentences:
-                            if sentence not in current_queries:
-                                current_queries.append(sentence)
-                        
+                        tasks[task_id]["image_queries"] = image_queries if 'image_queries' in locals() else []
                         tasks[task_id]["last_activity"] = time.time()
+        
+        # 3. 合并所有查询并进行智能去重和优化
+        all_queries.extend(media_queries)
+        
+        # 添加原始claim作为基础查询（如果不在列表中）
+        if task['claim'] not in all_queries:
+            all_queries.insert(0, task['claim'])
+        
+        print(f"合并前总查询数: {len(all_queries)}")
+        
+        # 使用优化的ClaimProcessor进行最终的合并和去重
+        optimized_queries = []
+        if all_queries:
+            # 创建临时处理器实例进行查询优化
+            temp_processor = None
+            try:
+                from processors.claim_processor import OptimizedClaimProcessor
+                temp_processor = OptimizedClaimProcessor(model_path=config.DEEPSEEK_MODEL_PATH)
+                optimized_queries = temp_processor.merge_and_deduplicate_queries(all_queries)
+            except Exception as e:
+                print(f"查询优化失败，使用原始查询: {e}")
+                # 如果优化失败，进行基础去重
+                seen = set()
+                optimized_queries = [q for q in all_queries if not (q in seen or seen.add(q))]
+                optimized_queries = optimized_queries[:6]  # 限制最多6个
+            finally:
+                if temp_processor:
+                    del temp_processor.model
+                    del temp_processor.tokenizer
+                    del temp_processor
+                    force_cleanup_gpu_memory()
+        
+        print(f"优化后查询数: {len(optimized_queries)}")
+        print(f"最终查询列表: {optimized_queries}")
         
         # 更新任务状态为等待查询
         with tasks_lock:
             if task_id in tasks and tasks[task_id]["client_connected"]:
+                tasks[task_id]["queries"] = optimized_queries
+                tasks[task_id]["original_query_count"] = len(all_queries)
+                tasks[task_id]["optimized_query_count"] = len(optimized_queries)
                 tasks[task_id]["status"] = "waiting_for_queries"
                 tasks[task_id]["last_activity"] = time.time()
-                print(f"任务 {task_id} 处理完成。{len(tasks[task_id]['queries'])} 个查询准备就绪。")
-                print(f"查询列表: {tasks[task_id]['queries'][:3]}...")  # 显示前3个查询
-                logger.info(f"任务 {task_id} 处理完成，{len(tasks[task_id]['queries'])} 个查询准备就绪")
+                
+                print(f"任务 {task_id} 优化处理完成。")
+                print(f"查询优化: {len(all_queries)} -> {len(optimized_queries)} 个查询")
+                logger.info(f"任务 {task_id} 优化处理完成，查询数量: {len(all_queries)} -> {len(optimized_queries)}")
             else:
                 print(f"任务 {task_id} 客户端已断开连接，停止处理")
                 return
@@ -301,29 +553,27 @@ def verify_results(task_id, use_partial_evidence=False):
                 all_evidence.extend(results)
         
         # 去重
-        all_evidence = list(set(all_evidence))
+        all_evidence = enhance_evidence(list(set(all_evidence)))
         evidence_count = len(all_evidence)
         
         update_progress("evidence_ready", f"已准备 {evidence_count} 条证据")
         
-        # 创建验证器实例（使用单例模式避免重复加载）
-        update_progress("loading_model", "正在加载验证模型")
-        verifier = get_or_create_verifier()
-        
-        # 初步验证
+        # 初步验证 - 创建新实例并在完成后清理
         update_progress("initial_verification", "正在进行初步验证")
-        initial_judgment = verifier.initial_verify(
+        initial_judgment = create_and_use_verifier(
             task["claim"], 
-            task.get("media_content")
+            task.get("media_content"),
+            is_initial=True
         )
         
         # 基于证据的最终验证
         if evidence_count > 0:
             update_progress("final_verification", "正在进行基于证据的最终验证")
-            final_judgment = verifier.verify_with_evidence(
+            final_judgment = create_and_use_verifier(
                 task["claim"], 
                 task.get("media_content"), 
-                all_evidence
+                all_evidence,
+                is_initial=False
             )
         else:
             update_progress("no_evidence", "没有外部证据，使用初步验证结果")
@@ -604,26 +854,6 @@ def get_verification_status(task_id):
             "time_since_last_activity": time.time() - task["last_activity"]
         })
 
-# 单例模式的验证器
-_verifier_instance = None
-_verifier_lock = threading.Lock()
-
-def get_or_create_verifier():
-    """获取或创建验证器实例（单例模式）"""
-    global _verifier_instance
-    
-    if _verifier_instance is None:
-        with _verifier_lock:
-            # 双重检查锁定
-            if _verifier_instance is None:
-                print(f"[{datetime.now()}] 创建新的验证器实例...")
-                logger.info("创建新的验证器实例...")
-                _verifier_instance = FactVerifier(model_path=config.DEEPSEEK_MODEL_PATH)
-                print(f"[{datetime.now()}] 验证器实例创建成功")
-                logger.info("验证器实例创建成功")
-    
-    return _verifier_instance
-
 @app.route('/get_task_status/<task_id>', methods=['GET'])
 def get_task_status(task_id):
     """获取任务状态"""
@@ -690,15 +920,12 @@ def direct_verify(task_id):
         print(f"开始直接验证任务 {task_id}...")
         logger.info(f"开始直接验证任务 {task_id}")
         
-        qwen_model = QwenModel(
-            model_path=config.QWEN_MODEL_PATH,
-            cache_dir=config.MODEL_CACHE_DIR
-        )
-        
-        verification_result = qwen_model.verify_claim(
+        # 创建新QwenModel实例并在完成后清理
+        verification_result = create_and_use_qwen_model(
             task["claim"], 
             task["media_path"], 
-            task["media_type"]
+            task["media_type"],
+            enable_deepfake_detection=True
         )
         
         # 保存结果
@@ -792,6 +1019,51 @@ def get_thread_pool_status():
         "thread_name_prefix": "fact_check_"
     })
 
+# 添加GPU内存状态监控端点
+@app.route('/gpu_memory_status', methods=['GET'])
+def get_gpu_memory_status():
+    """获取GPU内存使用状态"""
+    try:
+        if torch.cuda.is_available():
+            allocated = torch.cuda.memory_allocated() / 1024**3  # GB
+            cached = torch.cuda.memory_reserved() / 1024**3  # GB
+            max_allocated = torch.cuda.max_memory_allocated() / 1024**3  # GB
+            
+            return jsonify({
+                "gpu_available": True,
+                "allocated_memory_gb": round(allocated, 2),
+                "cached_memory_gb": round(cached, 2),
+                "max_allocated_gb": round(max_allocated, 2),
+                "device_count": torch.cuda.device_count(),
+                "current_device": torch.cuda.current_device()
+            })
+        else:
+            return jsonify({
+                "gpu_available": False,
+                "message": "No GPU available"
+            })
+    except Exception as e:
+        return jsonify({
+            "error": str(e),
+            "gpu_available": False
+        })
+
+# 添加手动清理内存的端点
+@app.route('/force_cleanup_memory', methods=['POST'])
+def force_cleanup_memory_endpoint():
+    """手动触发GPU内存清理"""
+    try:
+        force_cleanup_gpu_memory()
+        return jsonify({
+            "status": "success",
+            "message": "GPU memory cleanup completed"
+        })
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "error": str(e)
+        })
+
 if __name__ == '__main__':
     print("事实核查服务器正在启动...")
     print("配置信息:")
@@ -799,9 +1071,11 @@ if __name__ == '__main__':
     print(f"Qwen模型路径: {config.QWEN_MODEL_PATH}")
     print(f"监听地址: 0.0.0.0:8081")
     print(f"线程池工作线程数: {task_executor._max_workers}")
+    print("已启用推理后内存自动清理模式")
     
     logger.info("事实核查服务器正在启动...")
     logger.info(f"线程池工作线程数: {task_executor._max_workers}")
+    logger.info("已启用推理后内存自动清理模式")
     
     # 启动清理线程
     cleanup_thread = threading.Thread(target=cleanup_inactive_tasks, name="cleanup_thread")

@@ -1,7 +1,0 @@
-{
-  "task_id": "ace4eea3-26ad-49a4-996e-30d464a4fcf0",
-  "claim": "拜登罹患前列腺癌",
-  "media_type": "image",
-  "direct_verification": "system\nYou are a rigorous fact-checking assistant. Your task is to analyze a statement and a multimedia file (which may be an image or a video). You need to carefully analyze the multimedia content. Then, based on the information presented in the multimedia file, judge whether the provided statement is 'correct', 'incorrect', or 'unrelated' to the file's content. Your answer must be strictly limited to one of these three words: 'correct', 'incorrect', 'unrelated'. Do not add any additional explanation or information.\nuser\nStatement: 拜登罹患前列腺癌Please evaluate the above statement based on the provided multimedia file.\nassistant\nincorrect",
-  "completed_at": 1747816928.9969358
-}
