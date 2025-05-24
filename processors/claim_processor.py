@@ -143,32 +143,34 @@ class ClaimProcessor:
             str: 提示词
         """
         return f"""You are a helpful assistant designed to help with fact-checking. 
-        
-Please break down the given claim into simple, factual sentences that can be independently verified through search engines. 
-The sentences should be concise, clear, and standalone facts, you should summarize the most important facts into 3 sentences.
 
-For example, the claim "Barack Obama was the first African American president and served for 8 years" could be broken down into:
-1. Barack Obama was a president of the United States.
-2. Barack Obama was the first African American president of the United States.
-3. Barack Obama served as president for 8 years.
+Please break down the given claim into simple, factual sentences that can be independently verified through search engines. 
+
+Important rules:
+1. ONLY extract information directly from the given claim
+2. Do NOT add any information not present in the original claim
+3. Do NOT use any examples or information from this prompt
+4. Each sentence should be a simple, verifiable fact
+5. Focus on the key assertions in the claim
+
+Guidelines:
+- Break complex statements into simple subject-predicate-object sentences
+- Preserve all specific details (names, dates, numbers, locations)
+- Keep the original meaning and context
+- Generate 3-5 most important factual sentences
 
 Claim: {claim}
 
 <think>
-First, I'll analyze the key components of this claim:
-1. What are the main factual assertions?
-2. Who are the subjects and what actions are involved?
-3. What time periods, locations, or numeric values are mentioned?
-4. Are there complex assertions that should be broken into simpler parts?
-
-I'll make sure each sentence is:
-- Short and focused on a single fact
-- Written as a declarative statement
-- Free of subjective language or opinions
-- Suitable for search engine queries
+I need to analyze this specific claim and break it down into its core factual components.
+I must be careful to:
+1. Only use information explicitly stated in the claim
+2. Not introduce any external knowledge or examples
+3. Preserve the exact details mentioned
+4. Create simple, searchable sentences
 </think>
 
-Simple sentences for verification:
+Simple sentences for verification (based ONLY on the above claim):
 """
     
     def _extract_sentences(self, text):
